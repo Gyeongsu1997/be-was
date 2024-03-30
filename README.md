@@ -27,6 +27,7 @@ OS 스레드는 비용이 높아 요청량에 비례하여 늘릴 수 없기 때
 따라서 Concurrent 패키지에서 제공하는 스레드 풀 기능을 활용하기로 했다.
 java.util.concurrent 패키지의 ThreadPoolExecutor 클래스의 생성자를 호출하여 스레드 풀을 만들었다.
 아래 아파치 톰캣의 스레드 풀 설정을 참고하여 corePoolSize를 25, maximumPoolSize를 200, keepAliveTime을 60초로 설정했다.
+
 https://tomcat.apache.org/tomcat-8.5-doc/config/executor.html
 
 ## 구현 상 특이사항
