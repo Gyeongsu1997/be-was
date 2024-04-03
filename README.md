@@ -1,6 +1,6 @@
 # java-was-2023
 
-Java Web Application Server 2023
+Java Web myapplication.Application Server 2023
 
 ## 구현 내용
 1. java.nio 패키지를 사용한 부분을 java.io 패키지를 사용하도록 수정했습니다.
