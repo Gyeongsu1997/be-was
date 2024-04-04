@@ -69,6 +69,6 @@ public class MyApplicationContext implements BeanFactory {
 
     @Override
     public boolean containsBean(String name) {
-        return beanStore.containsKey("name");
+        return beanStore.containsKey(name);
     }
 }

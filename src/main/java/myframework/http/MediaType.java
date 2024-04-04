@@ -2,11 +2,13 @@ package myframework.http;
 
 import java.util.*;
 
-import myapplication.util.HttpRequest;
 import myframework.util.CollectionUtils;
 import myframework.util.MimeType;
 import myframework.util.MimeTypeUtils;
 import myframework.util.StringUtils;
+
+// TODO: 2024/04/04 framework 코드가 application 코드에 의존해서는 안됨. 추후 리팩토링 예정
+import myapplication.util.HttpRequest;
 import myapplication.util.ResourceUtils;
 
 public class MediaType extends MimeType {

@@ -4,6 +4,7 @@ import myapplication.db.UserDatabase;
 import myapplication.exception.UserException;
 import myapplication.model.User;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import myapplication.util.SessionManager;
 
@@ -18,7 +19,8 @@ public class UserServiceTest {
     }
 
     @Test
-    void 회원가입성공() {
+    @DisplayName("회원가입: 성공")
+    void createUserSuccess() {
         //Given
         String userId = "gyeongsu";
         String password = "1234";
@@ -38,7 +40,8 @@ public class UserServiceTest {
     }
 
     @Test
-    void 회원가입null값이들어왔을때() {
+    @DisplayName("회원가입: 매개변수로 null이 들어왔을 때")
+    void createUserWhenNull() {
         //Given
         String userId = "gyeongsu";
         String password = "1234";
@@ -55,7 +58,8 @@ public class UserServiceTest {
     }
 
     @Test
-    void 회원가입중복아이디() {
+    @DisplayName("회원가입: 중복 아이디")
+    void createUserDuplicateUserId() {
         //Given
         String userId = "gyeongsu";
         String password = "1234";
@@ -73,7 +77,8 @@ public class UserServiceTest {
     }
 
     @Test
-    void 회원가입중복이메일() {
+    @DisplayName("회원가입: 중복 이메일")
+    void createUserDuplicateEmail() {
         //Given
         String userId = "gyeongsu";
         String password = "1234";
@@ -91,7 +96,8 @@ public class UserServiceTest {
     }
 
     @Test
-    void 로그인성공() {
+    @DisplayName("로그인: 성공")
+    void loginSuccess() {
         //Given
         String userId = "gyeongsu";
         String password = "1234";
@@ -112,7 +118,8 @@ public class UserServiceTest {
     }
 
     @Test
-    void 로그인존재하지않는아이디() {
+    @DisplayName("로그인: 존재하지 않는 아이디")
+    void loginWithUserIdNotExist() {
         //Given
 
         //When
@@ -123,7 +130,8 @@ public class UserServiceTest {
     }
 
     @Test
-    void 로그인비밀번호오류() {
+    @DisplayName("로그인: 비밀번호 오류")
+    void loginNotCorrectPassword() {
         //Given
         String userId = "gyeongsu";
         String password = "1234";
@@ -139,7 +147,8 @@ public class UserServiceTest {
     }
 
     @Test
-    void 회원정보수정성공() {
+    @DisplayName("회원 정보 수정: 성공")
+    void updateUserSuccess() {
         //Given
         String userId = "gyeongsu";
         String password = "1234";
@@ -164,7 +173,8 @@ public class UserServiceTest {
     }
 
     @Test
-    void 회원정보수정null값이들어왔을때() {
+    @DisplayName("회원 정보 수정: 매개변수로 null이 들어 왔을 때")
+    void updateUserWhenNull() {
         //Given
         String userId = "gyeongsu";
         String password = "1234";
@@ -182,7 +192,8 @@ public class UserServiceTest {
     }
 
     @Test
-    void 회원정보수정중복이메일() {
+    @DisplayName("회원 정보 수정: 중복 이메일")
+    void updateUserDuplicateEmail() {
         //Given
         userService.create("gyeongsu", "1234", "gyeongsu", "gyeongsu@gmail.com");
 

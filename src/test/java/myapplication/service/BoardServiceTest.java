@@ -20,7 +20,7 @@ public class BoardServiceTest {
     private final BoardService boardService = new BoardService();
 
     @Test
-    @DisplayName("글 작성 성공")
+    @DisplayName("글 작성: 성공")
     void writeSuccess() {
         //given
         User writer = new User("gyeongsu", "1234", "최경수", "gyeongsu@gmail.com");
@@ -38,7 +38,7 @@ public class BoardServiceTest {
     }
 
     @Test
-    @DisplayName("글 작성 null값이 있을 때")
+    @DisplayName("글 작성: null값이 있을 때")
     void writeWithNull() {
         //given
         User writer = new User("gyeongsu", "1234", "최경수", "gyeongsu@gmail.com");
@@ -55,7 +55,7 @@ public class BoardServiceTest {
     }
 
     @Test
-    @DisplayName("글 수정 성공")
+    @DisplayName("글 수정: 성공")
     void updateSuccess() {
         //given
         User writer = new User("gyeongsu", "1234", "최경수", "gyeongsu@gmail.com");
@@ -75,7 +75,8 @@ public class BoardServiceTest {
     }
 
     @Test
-    void 댓글달기성공() {
+    @DisplayName("댓글 작성: 성공")
+    void commentSuccess() {
         //given
         User writer = new User("gyeongsu", "1234", "최경수", "gyeongsu@gmail.com");
         Long postId = boardService.write(writer, "오늘의 점심은", "순대국밥입니다.");
