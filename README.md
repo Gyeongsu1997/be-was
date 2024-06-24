@@ -1,9 +1,12 @@
 # java-was-2023
 
-Java Web myapplication.Application Server 2023
+Java Web Application Server 2023
 
 ## 프로젝트 기록
-1.리팩토링: [싱글톤 적용](https://github.com/Gyeongsu1997/be-was/wiki/%EC%8B%B1%EA%B8%80%ED%86%A4-%EC%A0%81%EC%9A%A9)
+
+|No|Label|Title|
+|:---:|:---:|:---:|
+|00|리팩토링|[싱글톤 적용](https://github.com/Gyeongsu1997/be-was/wiki/%EC%8B%B1%EA%B8%80%ED%86%A4-%EC%A0%81%EC%9A%A9)|
 
 ## 프로젝트 정보 
 
